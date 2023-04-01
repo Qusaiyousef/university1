@@ -215,27 +215,7 @@
             <textarea name="commit" class="box" placeholder="اكتب رسالتك" id="" cols="30" rows="10"></textarea>
             <input type="submit" value="ارسال" class="btn btnta">
         </form>
-        <?php
-include "init.php";
-
-
-
-
-
-if(isset($_POST['con_name']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['commit']))
-{
-$con_name= $_POST['con_name'];
-$email=$_POST['email'];
-$phone= $_POST['phone'];
-$commit=$_POST['commit'];
-$sql="insert into contact (con_name , con_email , con_phone , comment ) values ( '$con_name' , '$email' , '$phone' , '$commit') ";
-mysqli_query($conn , $sql);
-echo " تم  الارسال ";
-}
-else
-echo " هناك خطاء";
-mysqli_close($conn);
-?>
+ 
 
         <div class="image">
             <img src="images/Get in touch-amico.svg" alt="">
